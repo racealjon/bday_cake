@@ -1,0 +1,138 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /* background-image: url("../images/bg-image.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; */
+  background-color: #0daee4;
+  overflow: hidden;
+  font-family: sans-serif;
+}
+/* Next  button */
+
+.arrow-btn {
+  background-color: red;
+  color: white;
+  position: fixed;
+  left: 20px;
+  top: 20px;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.arrow-btn:hover {
+  background-color: #0056b3;
+}
+
+.arrow-right::after {
+  margin-left: 5px;
+}
+.giftcontainer {
+  position: relative;
+}
+
+.giftcontainer::before {
+  content: "";
+  position: absolute;
+  left: 35px;
+  width: 290px;
+  height: 20px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  top: 140px;
+  /* left: -10px; */
+}
+
+.gift {
+  position: absolute;
+  align-items: center;
+  left: 73px;
+  width: 200px;
+  height: 150px;
+  background-color: #fff;
+}
+
+.gift::before {
+  content: "";
+  position: absolute;
+  width: 28px;
+  height: 150px;
+  background-color: rgb(195, 14, 14);
+  left: 85px;
+}
+.gift::after {
+  content: "";
+  position: absolute;
+  box-shadow: inset 0 10px rgba(0, 0, 0, 0.3);
+  width: 201px;
+  height: 100px;
+}
+#click {
+  display: none;
+}
+
+.click {
+  position: absolute;
+  background-color: #fff;
+
+  width: 220px;
+  height: 40px;
+  top: -40px;
+  left: -10px;
+  transform-origin: bottom left;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.click::before {
+  content: "";
+  position: absolute;
+  width: 28px;
+  height: 40px;
+  background-color: rgb(195, 14, 14);
+  left: 95px;
+}
+.click::after {
+  content: "";
+  position: absolute;
+
+  width: 8px;
+  height: 0;
+  border-bottom: 30px solid rgb(195, 14, 14);
+  border-top: 30px solid rgb(195, 14, 14);
+  border-left: 0px solid transparent;
+  border-right: 30px solid transparent;
+  transform: rotate(-90deg);
+  left: 91px;
+  top: -48px;
+}
+
+#click:checked + .click {
+  transform: rotate(-110deg) scale(0.85);
+}
+
+#click:checked ~ .wish {
+  transform: translateY(-120px);
+}
+
+.wish {
+  position: absolute;
+
+  transition: 0.5s;
+  color: #fff;
+  font-size: 25px;
+  text-transform: uppercase;
+  text-align: center;
+  align-items: center;
+  z-index: -1;
+  left: 10px;
+  right: 10px;
+  text-shadow: 0 0 10px black;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/giftbox.css" />
+    <title>Gift</title>
+  </head>
+  <body>
+    <a href="index.html"
+      ><button id="myButton" class="arrow-btn arrow-right">Home</button></a
+    >
+    <div class="giftcontainer">
+      <div class="gift">
+        <input type="checkbox" id="click" class="confetti" />
+        <label for="click" class="click"></label>
+        <div class="wish">
+          <img
+            src="images/gift.png"
+            class="zoom-image"
+            alt="image"
+            width="105"
+            height="100"
+          />
+        </div>
+        <audio src="videos/bday1.mp3" id="playMo"></audio>
+      </div>
+    </div>
+
+    <!-- Confetti -->
+    <canvas id="confetti"></canvas>
+
+    <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+  </body>
+  <script src="js/giftbox.js"></script>
+</html>
